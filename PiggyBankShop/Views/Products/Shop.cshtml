@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@model IEnumerable<PiggyBankShop.Models.Product>
+
+
+
+<!DOCTYPE html>
 
 <html>
     <head>
@@ -6,5 +10,14 @@
     </head>
     <body>
         <h1>Piggy Bank Shop</h1>
+
+        @foreach (var item in Model)
+        {
+            <img height="100" width="100" src="@item.ImageUrl"/>
+            <h3>@item.Name</h3>
+            <p>@item.Price.ToString("c")</p>
+        }
+
+
     </body>
 </html>
