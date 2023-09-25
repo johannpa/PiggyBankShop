@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PiggyBankShop.Data;
 
@@ -10,9 +11,11 @@ using PiggyBankShop.Data;
 namespace PiggyBankShop.Migrations
 {
     [DbContext(typeof(PiggyBankShopDbContext))]
-    partial class PiggyBankShopDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230925181225_seedProductsTable")]
+    partial class seedProductsTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -62,7 +65,7 @@ namespace PiggyBankShop.Migrations
                         {
                             Id = 2,
                             Detail = "Anything suspicious? Well... then should we go? Any uh... Cartel news these days? Seems like I'm always reading something or other in the paper. I don't want to talk about it. To you or anyone else. I'm done explaining myself. Gus is dead. We've got work to do. ",
-                            ImageUrl = "https://media.istockphoto.com/id/487095850/fr/photo/petite-fille-posant-pi%C3%A8ce-dans-la-tirelire-cochon.jpg?s=612x612&w=0&k=20&c=UA10ljeAtDh0w4AZdSkfmHVplnWxLKLBa7cq3bUUqMA=",
+                            ImageUrl = "",
                             IsTrendingProduct = true,
                             Name = "Big pig 2",
                             Price = 35m
