@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
-builder.Services.AddDbContext<PiggyBankShopDbContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("PiggyBankShopDbContext")));
+builder.Services.AddDbContext<PiggyBankShopDbContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("PiggyBankShopDbContextConnection")));
 
 var app = builder.Build();
 
