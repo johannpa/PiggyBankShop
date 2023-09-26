@@ -1,14 +1,8 @@
-﻿@model IEnumerable<PiggyBankShop.Models.Product>
+﻿@model IEnumerable<Product>
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 
-<!DOCTYPE html>
 
-<html>
-    <head>
-        <title>PiggyBankShop</title>
-    </head>
-    <body>
         <h1>Piggy Bank Shop</h1>
 
         @foreach (var item in Model)
@@ -18,6 +12,3 @@
             <p>@item.Price.ToString("c")</p>
         }
 
-
-    </body>
-</html>
