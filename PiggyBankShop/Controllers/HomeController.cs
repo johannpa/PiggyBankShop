@@ -5,7 +5,7 @@ namespace PiggyBankShop.Controllers
 {
     public class HomeController : Controller
     {
-        private IProductRepository _productRepository;
+        private readonly IProductRepository _productRepository;
 
         public HomeController(IProductRepository productRepository)
         {
