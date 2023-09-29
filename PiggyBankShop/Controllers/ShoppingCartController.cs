@@ -3,12 +3,12 @@ using PiggyBankShop.Models.Interfaces;
 
 namespace PiggyBankShop.Controllers
 {
-    public class ShoppingCartController1 : Controller
+    public class ShoppingCartController : Controller
     {
         private IShoppingCartRepository shoppingCartRepository;
         private IProductRepository productRepository;
 
-        public ShoppingCartController1(IShoppingCartRepository shoppingCartRepository, IProductRepository productRepository)
+        public ShoppingCartController(IShoppingCartRepository shoppingCartRepository, IProductRepository productRepository)
         {
             this.shoppingCartRepository = shoppingCartRepository;
             this.productRepository = productRepository;
