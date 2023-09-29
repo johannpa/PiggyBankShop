@@ -30,7 +30,7 @@ namespace PiggyBankShop.Models.Services
         public void AddToCart(Product product)
         {
             var shoppingCartItem = dbContext.ShoppingCartItems.FirstOrDefault(s => s.Product.Id == product.Id && s.ShoppingCartId == ShoppingCartId);
-            if (shoppingCartItem != null)
+            if (shoppingCartItem == null)
             {
                 shoppingCartItem = new ShoppingCartItem
                 {
