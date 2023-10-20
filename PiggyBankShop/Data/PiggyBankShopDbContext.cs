@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using PiggyBankShop.Models;
 
 namespace PiggyBankShop.Data
 {
-    public class PiggyBankShopDbContext : DbContext
+    public class PiggyBankShopDbContext : IdentityDbContext
     {
         public PiggyBankShopDbContext(DbContextOptions<PiggyBankShopDbContext> options):base(options)
         {
