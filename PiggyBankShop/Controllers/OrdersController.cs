@@ -24,6 +24,7 @@ namespace PiggyBankShop.Controllers
         {
             _orderRepository.PlaceOrder(order);
             _shoppingCartRepository.CleanCart();
+            HttpContext.Session.SetInt32("CartCount", 0);
             return Redirect("CheckoutComplete");
         }
 
